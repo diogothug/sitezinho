@@ -1,0 +1,64 @@
+{
+  "categories": [
+    { "id": "praias", "label": "Praias Paradisíacas" },
+    { "id": "gastronomia", "label": "Restaurantes Parceiros" },
+    { "id": "passeios", "label": "Passeios & Experiências" },
+    { "id": "utilidade", "label": "Farmácias, Mercados & Emergência" }
+  ],
+  "attractions": [
+    {
+      "id": "g1",
+      "categoryId": "praias",
+      "title": "Praia da Boca da Barra",
+      "distance": "5 min a pé",
+      "description": "Praia de águas calmas onde o rio encontra o mar. Perfeita para banho, caiaque e apreciar o pôr do sol nas barracas de praia.",
+      "image": "/images/drink_tropical.jpg",
+      "badge": "Mais Próxima"
+    },
+    {
+      "id": "g2",
+      "categoryId": "praias",
+      "title": "Praia de Moreré & Piscinas Naturais",
+      "distance": "15 min de quadriciclo ou 45 min a pé",
+      "description": "Cartão postal da ilha. Águas cristalinas e piscinas naturais na maré baixa repletas de peixes coloridos.",
+      "image": "/images/pousada_header.jpg",
+      "badge": "Imperdível"
+    },
+    {
+      "id": "g3",
+      "categoryId": "praias",
+      "title": "Praia de Bainema",
+      "distance": "25 min de quadriciclo",
+      "description": "Extensa praia deserta cercada por coqueiros inclinados. Tranquilidade absoluta e mar transparente.",
+      "image": "/images/drink_tropical.jpg",
+      "badge": "Deserta"
+    },
+    {
+      "id": "g4",
+      "categoryId": "gastronomia",
+      "title": "Restaurante Moqueca do Guido",
+      "distance": "Praia da Cueira (15 min a pé)",
+      "description": "Famoso pela moqueca de lagosta na lenha preparada à beira da praia.",
+      "image": "/images/cafe_da_manha.jpg",
+      "badge": "Culinária Baiana"
+    },
+    {
+      "id": "g5",
+      "categoryId": "passeios",
+      "title": "Volta à Ilha de Lancha",
+      "distance": "Saída do Cais (8 min a pé)",
+      "description": "Passeio completo parando nas Piscinas Naturais de Moreré, Ponta dos Castelhanos e degustação de ostras em Cova da Onça.",
+      "image": "/images/pousada_header.jpg",
+      "badge": "Passeio Principal"
+    },
+    {
+      "id": "g6",
+      "categoryId": "utilidade",
+      "title": "Farmácia Boipeba & Posto de Saúde",
+      "distance": "Vila de Velha Boipeba (3 min a pé)",
+      "description": "Atendimento médico de emergência e farmácia com medicamentos básicos e protetor solar.",
+      "image": "/images/cafe_da_manha.jpg",
+      "badge": "Emergência / 24h"
+    }
+  ]
+}

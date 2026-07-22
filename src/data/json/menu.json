@@ -1,0 +1,112 @@
+{
+  "categories": [
+    { "id": "cafe", "name": "Café da Manhã Exclusivo", "icon": "Coffee" },
+    { "id": "lanches", "name": "Hambúrgueres & Lanches", "icon": "Utensils" },
+    { "id": "porcoes", "name": "Petiscos & Porções", "icon": "Pizza" },
+    { "id": "drinks", "name": "Drinks & Coquetéis", "icon": "Wine" },
+    { "id": "bebidas", "name": "Sucos & Bebidas", "icon": "GlassWater" },
+    { "id": "sobremesas", "name": "Sobremesas Artesanais", "icon": "IceCream" }
+  ],
+  "items": [
+    {
+      "id": "m1",
+      "categoryId": "cafe",
+      "title": "Tapioca da Terra",
+      "description": "Tapioca crocante recheada com queijo coalho grelhado e banana da terra caramelizada.",
+      "price": 24.00,
+      "image": "/images/cafe_da_manha.jpg",
+      "tags": ["Vegetariano", "Sem Glúten"],
+      "searchKeywords": ["tapioca", "queijo", "café", "banana", "café da manhã"]
+    },
+    {
+      "id": "m2",
+      "categoryId": "cafe",
+      "title": "Combo Matinal Tropical",
+      "description": "Suco de laranja natural, salada de frutas da estação, pão de queijo quentinho e café moído na hora.",
+      "price": 38.00,
+      "image": "/images/cafe_da_manha.jpg",
+      "tags": ["Recomendado"],
+      "searchKeywords": ["combo", "frutas", "pão de queijo", "suco", "café da manhã"]
+    },
+    {
+      "id": "m3",
+      "categoryId": "lanches",
+      "title": "Burger Mar & Sol",
+      "description": "180g de blend bovino artesanal, queijo cheddar cremoso, bacon crocante, geleia de pimenta e maionese da casa no pão brioche.",
+      "price": 46.00,
+      "image": "/images/pousada_header.jpg",
+      "tags": ["Mais Pedido"],
+      "searchKeywords": ["hambúrguer", "burger", "lanche", "carne", "cheddar", "bacon"]
+    },
+    {
+      "id": "m4",
+      "categoryId": "lanches",
+      "title": "Sanduíche Natural de Frango",
+      "description": "Pão integral de fermentação natural, frango desfiado com maionese de ervas, cenoura e alface orgânica.",
+      "price": 32.00,
+      "image": "/images/cafe_da_manha.jpg",
+      "tags": ["Leve"],
+      "searchKeywords": ["sanduíche", "frango", "fit", "integral", "lanche"]
+    },
+    {
+      "id": "m5",
+      "categoryId": "porcoes",
+      "title": "Iscas de Peixe Crocantes",
+      "description": "Peixe fresco da ilha empanado na farinha panko, acompanhado de molho tártaro caseiro e gomos de limão.",
+      "price": 58.00,
+      "image": "/images/drink_tropical.jpg",
+      "tags": ["Peixe Fresco", "Petisco"],
+      "searchKeywords": ["peixe", "iscas", "porção", "tártaro", "petisco", "cerveja"]
+    },
+    {
+      "id": "m6",
+      "categoryId": "porcoes",
+      "title": "Camarão Alho e Óleo",
+      "description": "Camarões rosa salteados no azeite de oliva, alho dourado e salsa fresca. Acompanha torradas temperadas.",
+      "price": 78.00,
+      "image": "/images/drink_tropical.jpg",
+      "tags": ["Chef Special"],
+      "searchKeywords": ["camarão", "alho", "frutos do mar", "porção", "petisco"]
+    },
+    {
+      "id": "m7",
+      "categoryId": "drinks",
+      "title": "Caipirinha Bahiana Tradicional",
+      "description": "Cachaça artesanal baiana, limão taiti, açúcar demerara e bastante gelo.",
+      "price": 28.00,
+      "image": "/images/drink_tropical.jpg",
+      "tags": ["Clássico"],
+      "searchKeywords": ["caipirinha", "cachaça", "limão", "drink", "bebida", "álcool"]
+    },
+    {
+      "id": "m8",
+      "categoryId": "drinks",
+      "title": "Drink Mar de Boipeba",
+      "description": "Gin premium, xarope de maracujá caseiro, água tônica e raminho de alecrim tostado.",
+      "price": 36.00,
+      "image": "/images/drink_tropical.jpg",
+      "tags": ["Assinatura"],
+      "searchKeywords": ["gin", "maracujá", "drink", "coquetel", "bebida", "tônica"]
+    },
+    {
+      "id": "m9",
+      "categoryId": "bebidas",
+      "title": "Água de Coco Geladinha",
+      "description": "Água de coco natural tirada na hora.",
+      "price": 10.00,
+      "image": "/images/drink_tropical.jpg",
+      "tags": ["Natural"],
+      "searchKeywords": ["água de coco", "coco", "bebida", "hidratação"]
+    },
+    {
+      "id": "m10",
+      "categoryId": "sobremesas",
+      "title": "Cocada Cremosa na Colher",
+      "description": "Cocada tradicional baiana morna com sorvete artesanal de creme e calda de maracujá.",
+      "price": 26.00,
+      "image": "/images/cafe_da_manha.jpg",
+      "tags": ["Típico"],
+      "searchKeywords": ["cocada", "sobremesa", "doce", "sorvete", "maracujá"]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "id": "r1",
+      "title": "Horários de Check-in e Check-out",
+      "summary": "Check-in a partir das 14:00 | Check-out até 12:00",
+      "details": "Caso necessite de late check-out ou guardar suas bagagens após o horário de saída, solicite com antecedência na recepção. O uso das áreas comuns permanece liberado no dia da saída.",
+      "category": "geral",
+      "icon": "Clock"
+    },
+    {
+      "id": "r2",
+      "title": "Horário de Silêncio",
+      "summary": "Das 22:00 às 08:00",
+      "details": "Para garantir o descanso de todos os hóspedes, pedimos a gentileza de manter o volume da TV e conversas baixo nas áreas sociais e varandas dos quartos durante este período.",
+      "category": "convivencia",
+      "icon": "VolumeX"
+    },
+    {
+      "id": "r3",
+      "title": "Uso da Piscina e Toalhas",
+      "summary": "Piscina aberta das 08:00 às 22:00",
+      "details": "É proibido o uso de copos ou garrafas de vidro na área da piscina. Toalhas exclusivas para uso na piscina/praia podem ser retiradas ou trocadas diretamente na recepção.",
+      "category": "lazer",
+      "icon": "Waves"
+    },
+    {
+      "id": "r4",
+      "title": "Voltagem & Ar-Condicionado",
+      "summary": "Tomadas 220V em toda a pousada",
+      "details": "Por favor, desligue o ar-condicionado e as luzes ao se ausentar do quarto. Ajude-nos a preservar a natureza da Ilha de Boipeba!",
+      "category": "quarto",
+      "icon": "Zap"
+    },
+    {
+      "id": "r5",
+      "title": "Política Pet Friendly",
+      "summary": "Pets de pequeno porte são bem-vindos!",
+      "details": "Pedimos que os pets utilizem coleira nas áreas comuns e que os tutores recolham os resíduos. Não é permitida a entrada de pets dentro da água da piscina.",
+      "category": "convivencia",
+      "icon": "Heart"
+    },
+    {
+      "id": "r6",
+      "title": "Chave do Quarto & Economia",
+      "summary": "Deixe sua chave na recepção ao passear",
+      "details": "Recomendamos deixar o cartão/chave na recepção quando for fazer passeios ou ir à praia para evitar perdas na areia.",
+      "category": "seguranca",
+      "icon": "Key"
+    }
+  ]
+}

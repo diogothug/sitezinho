@@ -1,0 +1,21 @@
+{
+  "short_name": "PousadaPortal",
+  "name": "Pousada Mar & Sol - Portal do Hóspede",
+  "icons": [
+    {
+      "src": "/images/pousada_header.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/images/pousada_header.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
