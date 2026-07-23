@@ -1,0 +1,14 @@
+{
+  "accommodations": [
+    { "id": "Q01", "name": "Quarto 01 - Vista Mar", "type": "quarto" },
+    { "id": "Q02", "name": "Quarto 02 - Vista Mar", "type": "quarto" },
+    { "id": "Q03", "name": "Quarto 03 - Varanda Coqueiral", "type": "quarto" },
+    { "id": "Q04", "name": "Quarto 04 - Varanda Coqueiral", "type": "quarto" },
+    { "id": "Q05", "name": "Quarto 05 - Brisa do Mar", "type": "quarto" },
+    { "id": "Q06", "name": "Quarto 06 - Brisa do Mar", "type": "quarto" },
+    { "id": "Q07", "name": "Quarto 07 - Jardim Tropical", "type": "quarto" },
+    { "id": "Q08", "name": "Quarto 08 - Jardim Tropical", "type": "quarto" },
+    { "id": "CH01", "name": "Chalé 01 - Chalé Mar de Moreré", "type": "chale" },
+    { "id": "CH02", "name": "Chalé 02 - Chalé Panorama Beira-Mar", "type": "chale" }
+  ]
+}

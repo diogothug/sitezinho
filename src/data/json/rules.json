@@ -3,50 +3,50 @@
     {
       "id": "r1",
       "title": "Horários de Check-in e Check-out",
-      "summary": "Check-in a partir das 14:00 | Check-out até 12:00",
-      "details": "Caso necessite de late check-out ou guardar suas bagagens após o horário de saída, solicite com antecedência na recepção. O uso das áreas comuns permanece liberado no dia da saída.",
+      "summary": "Check-in às 14:00 | Check-out impreterivelmente às 11:00",
+      "details": "O check-out deve ser realizado até às 11:00 para podermos preparar as acomodações para os próximos hóspedes. Você pode guardar suas malas na recepção e continuar aproveitando a Praia de Moreré!",
       "category": "geral",
       "icon": "Clock"
     },
     {
       "id": "r2",
-      "title": "Horário de Silêncio",
-      "summary": "Das 22:00 às 08:00",
-      "details": "Para garantir o descanso de todos os hóspedes, pedimos a gentileza de manter o volume da TV e conversas baixo nas áreas sociais e varandas dos quartos durante este período.",
-      "category": "convivencia",
-      "icon": "VolumeX"
-    },
-    {
-      "id": "r3",
-      "title": "Uso da Piscina e Toalhas",
-      "summary": "Piscina aberta das 08:00 às 22:00",
-      "details": "É proibido o uso de copos ou garrafas de vidro na área da piscina. Toalhas exclusivas para uso na piscina/praia podem ser retiradas ou trocadas diretamente na recepção.",
-      "category": "lazer",
-      "icon": "Waves"
-    },
-    {
-      "id": "r4",
-      "title": "Voltagem & Ar-Condicionado",
-      "summary": "Tomadas 220V em toda a pousada",
-      "details": "Por favor, desligue o ar-condicionado e as luzes ao se ausentar do quarto. Ajude-nos a preservar a natureza da Ilha de Boipeba!",
-      "category": "quarto",
+      "title": "Uso Consciente de Energia & Chuveiro",
+      "summary": "NÃO utilizar o Chuveiro Elétrico e o Ar-Condicionado simultaneamente",
+      "details": "Para evitar quedas na rede elétrica da ilha e garantir a estabilidade do seu quarto, pedimos a gentileza de desligar o ar-condicionado durante o banho quente. Ajude-nos a preservar Moreré!",
+      "category": "sustentabilidade",
       "icon": "Zap"
     },
     {
-      "id": "r5",
+      "id": "r3",
       "title": "Política Pet Friendly",
-      "summary": "Pets de pequeno porte são bem-vindos!",
-      "details": "Pedimos que os pets utilizem coleira nas áreas comuns e que os tutores recolham os resíduos. Não é permitida a entrada de pets dentro da água da piscina.",
+      "summary": "Cães de porte médio são bem-vindos! (Taxa R$ 40/diária)",
+      "details": "Amamos receber seu pet! Solicitamos o uso de coleira nas áreas comuns da pousada e que os tutores mantenham a higiene do local. Taxa de hospedagem pet: R$ 40 por diária.",
       "category": "convivencia",
       "icon": "Heart"
     },
     {
-      "id": "r6",
-      "title": "Chave do Quarto & Economia",
-      "summary": "Deixe sua chave na recepção ao passear",
-      "details": "Recomendamos deixar o cartão/chave na recepção quando for fazer passeios ou ir à praia para evitar perdas na areia.",
+      "id": "r4",
+      "title": "Ambiente Livre de Fumo",
+      "summary": "Proibido fumar no interior dos quartos e chalés",
+      "details": "É estritamente proibido fumar dentro dos quartos e chalés. O descumprimento acarretará taxa de higienização de R$ 200.",
       "category": "seguranca",
-      "icon": "Key"
+      "icon": "VolumeX"
+    },
+    {
+      "id": "r5",
+      "title": "Horário de Silêncio & Natureza",
+      "summary": "Das 22:00 às 08:00",
+      "details": "Aproveite a tranquilidade e o som natural das ondas de Moreré. Por favor, mantenha conversas e aparelhos sonoros em tom suave durante a noite.",
+      "category": "convivencia",
+      "icon": "VolumeX"
+    },
+    {
+      "id": "r6",
+      "title": "Frigobar & Room Service Beira-Mar",
+      "summary": "Serviço de Quarto e Bebidas Geladas",
+      "details": "Nossos quartos não possuem frigobar para incentivar a experiência na praia e restaurante, mas nossa equipe entrega bebidas trincando de geladas no seu quarto até às 21:00!",
+      "category": "quarto",
+      "icon": "Waves"
     }
   ]
 }

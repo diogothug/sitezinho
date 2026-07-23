@@ -1,18 +1,27 @@
 {
   "categories": [
-    { "id": "cafe", "name": "Café da Manhã Exclusivo", "icon": "Coffee" },
-    { "id": "lanches", "name": "Hambúrgueres & Lanches", "icon": "Utensils" },
-    { "id": "porcoes", "name": "Petiscos & Porções", "icon": "Pizza" },
-    { "id": "drinks", "name": "Drinks & Coquetéis", "icon": "Wine" },
-    { "id": "bebidas", "name": "Sucos & Bebidas", "icon": "GlassWater" },
-    { "id": "sobremesas", "name": "Sobremesas Artesanais", "icon": "IceCream" }
+    { "id": "especiais", "name": "Especiais Mar de Moreré", "icon": "Utensils" },
+    { "id": "cafe", "name": "Café da Manhã (08h às 10h30)", "icon": "Coffee" },
+    { "id": "petiscos", "name": "Petiscos Pé na Areia", "icon": "Pizza" },
+    { "id": "drinks", "name": "Drinks & Coquetéis Tropicais", "icon": "Wine" },
+    { "id": "bebidas", "name": "Sucos & Bebidas Geladas", "icon": "GlassWater" }
   ],
   "items": [
     {
+      "id": "m_lagosta",
+      "categoryId": "especiais",
+      "title": "Lagosta na Manteiga de Garrafa",
+      "description": "Prato assinatura da pousada. Cauda de lagosta fresca grelhada no braseiro com manteiga de garrafa aromática, ervas locais, arroz de coco e farofa de dendê.",
+      "price": 120.00,
+      "image": "/images/lagosta_manteiga.jpg",
+      "tags": ["⭐ Especialidade da Casa", "Mais Pedido"],
+      "searchKeywords": ["lagosta", "manteiga", "frutos do mar", "peixe", "especial", "almoço", "jantar"]
+    },
+    {
       "id": "m1",
       "categoryId": "cafe",
-      "title": "Tapioca da Terra",
-      "description": "Tapioca crocante recheada com queijo coalho grelhado e banana da terra caramelizada.",
+      "title": "Tapioca de Moreré",
+      "description": "Tapioca quentinha recheada com queijo coalho artesanal grelhado e banana da terra caramelizada.",
       "price": 24.00,
       "image": "/images/cafe_da_manha.jpg",
       "tags": ["Vegetariano", "Sem Glúten"],
@@ -21,38 +30,18 @@
     {
       "id": "m2",
       "categoryId": "cafe",
-      "title": "Combo Matinal Tropical",
-      "description": "Suco de laranja natural, salada de frutas da estação, pão de queijo quentinho e café moído na hora.",
+      "title": "Combo Matinal Moreré",
+      "description": "Suco de mangaba ou laranja, frutas frescas da estação, pães caseiros, bolo de milho e café baiano coado.",
       "price": 38.00,
       "image": "/images/cafe_da_manha.jpg",
       "tags": ["Recomendado"],
-      "searchKeywords": ["combo", "frutas", "pão de queijo", "suco", "café da manhã"]
-    },
-    {
-      "id": "m3",
-      "categoryId": "lanches",
-      "title": "Burger Mar & Sol",
-      "description": "180g de blend bovino artesanal, queijo cheddar cremoso, bacon crocante, geleia de pimenta e maionese da casa no pão brioche.",
-      "price": 46.00,
-      "image": "/images/pousada_header.jpg",
-      "tags": ["Mais Pedido"],
-      "searchKeywords": ["hambúrguer", "burger", "lanche", "carne", "cheddar", "bacon"]
-    },
-    {
-      "id": "m4",
-      "categoryId": "lanches",
-      "title": "Sanduíche Natural de Frango",
-      "description": "Pão integral de fermentação natural, frango desfiado com maionese de ervas, cenoura e alface orgânica.",
-      "price": 32.00,
-      "image": "/images/cafe_da_manha.jpg",
-      "tags": ["Leve"],
-      "searchKeywords": ["sanduíche", "frango", "fit", "integral", "lanche"]
+      "searchKeywords": ["combo", "frutas", "pão", "suco", "café da manhã"]
     },
     {
       "id": "m5",
-      "categoryId": "porcoes",
-      "title": "Iscas de Peixe Crocantes",
-      "description": "Peixe fresco da ilha empanado na farinha panko, acompanhado de molho tártaro caseiro e gomos de limão.",
+      "categoryId": "petiscos",
+      "title": "Iscas de Peixe Fresco",
+      "description": "Iscas de peixe da praia de Moreré empanadas crocantes com molho tártaro de coentro e limão taiti.",
       "price": 58.00,
       "image": "/images/drink_tropical.jpg",
       "tags": ["Peixe Fresco", "Petisco"],
@@ -60,9 +49,9 @@
     },
     {
       "id": "m6",
-      "categoryId": "porcoes",
-      "title": "Camarão Alho e Óleo",
-      "description": "Camarões rosa salteados no azeite de oliva, alho dourado e salsa fresca. Acompanha torradas temperadas.",
+      "categoryId": "petiscos",
+      "title": "Camarão Crocante de Moreré",
+      "description": "Camarões rosa salteados no azeite com alho dourado e pimenta de cheiro. Acompanha torradas da casa.",
       "price": 78.00,
       "image": "/images/drink_tropical.jpg",
       "tags": ["Chef Special"],
@@ -71,42 +60,32 @@
     {
       "id": "m7",
       "categoryId": "drinks",
-      "title": "Caipirinha Bahiana Tradicional",
-      "description": "Cachaça artesanal baiana, limão taiti, açúcar demerara e bastante gelo.",
+      "title": "Caipirinha de Umbu-Cajá",
+      "description": "Cachaça baiana envelhecida, polpa de umbu-cajá fresco, açúcar demerara e gelo picado.",
       "price": 28.00,
       "image": "/images/drink_tropical.jpg",
-      "tags": ["Clássico"],
-      "searchKeywords": ["caipirinha", "cachaça", "limão", "drink", "bebida", "álcool"]
+      "tags": ["Autoral"],
+      "searchKeywords": ["caipirinha", "cachaça", "cajá", "drink", "bebida", "álcool"]
     },
     {
       "id": "m8",
       "categoryId": "drinks",
-      "title": "Drink Mar de Boipeba",
-      "description": "Gin premium, xarope de maracujá caseiro, água tônica e raminho de alecrim tostado.",
+      "title": "Gin Tropical de Moreré",
+      "description": "Gin nacional premium, xarope de maracujá caseiro, água tônica e alecrim incensado.",
       "price": 36.00,
       "image": "/images/drink_tropical.jpg",
-      "tags": ["Assinatura"],
-      "searchKeywords": ["gin", "maracujá", "drink", "coquetel", "bebida", "tônica"]
+      "tags": ["Refrescante"],
+      "searchKeywords": ["gin", "maracujá", "drink", "coquetel", "bebida"]
     },
     {
       "id": "m9",
       "categoryId": "bebidas",
-      "title": "Água de Coco Geladinha",
-      "description": "Água de coco natural tirada na hora.",
+      "title": "Água de Coco na Fruta",
+      "description": "Água de coco bem gelada tirada na hora dos coqueiros da praia.",
       "price": 10.00,
       "image": "/images/drink_tropical.jpg",
-      "tags": ["Natural"],
+      "tags": ["Pé na Areia"],
       "searchKeywords": ["água de coco", "coco", "bebida", "hidratação"]
-    },
-    {
-      "id": "m10",
-      "categoryId": "sobremesas",
-      "title": "Cocada Cremosa na Colher",
-      "description": "Cocada tradicional baiana morna com sorvete artesanal de creme e calda de maracujá.",
-      "price": 26.00,
-      "image": "/images/cafe_da_manha.jpg",
-      "tags": ["Típico"],
-      "searchKeywords": ["cocada", "sobremesa", "doce", "sorvete", "maracujá"]
     }
   ]
 }

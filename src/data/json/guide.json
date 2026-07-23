@@ -1,64 +1,55 @@
 {
   "categories": [
-    { "id": "praias", "label": "Praias Paradisíacas" },
-    { "id": "gastronomia", "label": "Restaurantes Parceiros" },
-    { "id": "passeios", "label": "Passeios & Experiências" },
-    { "id": "utilidade", "label": "Farmácias, Mercados & Emergência" }
+    { "id": "morere", "label": "Moreré & Piscinas Naturais" },
+    { "id": "praias", "label": "Praias Vizinhas" },
+    { "id": "gastronomia", "label": "Culinária Local" },
+    { "id": "utilidade", "label": "Transporte & Serviços Úteis" }
   ],
   "attractions": [
     {
       "id": "g1",
-      "categoryId": "praias",
-      "title": "Praia da Boca da Barra",
-      "distance": "5 min a pé",
-      "description": "Praia de águas calmas onde o rio encontra o mar. Perfeita para banho, caiaque e apreciar o pôr do sol nas barracas de praia.",
-      "image": "/images/drink_tropical.jpg",
-      "badge": "Mais Próxima"
+      "categoryId": "morere",
+      "title": "Piscinas Naturais de Moreré",
+      "distance": "Em frente à Pousada (saída de lancha/canoa)",
+      "description": "Aquário natural com águas mornas e cristalinas repleto de peixes coloridos e corais na maré baixa. Saída de lancha direto da praia.",
+      "image": "/images/pousada_header.jpg",
+      "badge": "Imperdível / Cartão Postal"
     },
     {
       "id": "g2",
       "categoryId": "praias",
-      "title": "Praia de Moreré & Piscinas Naturais",
-      "distance": "15 min de quadriciclo ou 45 min a pé",
-      "description": "Cartão postal da ilha. Águas cristalinas e piscinas naturais na maré baixa repletas de peixes coloridos.",
-      "image": "/images/pousada_header.jpg",
-      "badge": "Imperdível"
+      "title": "Trilha para a Praia de Bainema",
+      "distance": "15 min a pé a partir de Moreré",
+      "description": "Caminhada tranquila até a belíssima Praia de Bainema, cercada por um túnel de coqueiros e mar calmo.",
+      "image": "/images/drink_tropical.jpg",
+      "badge": "Natureza Pura"
     },
     {
       "id": "g3",
-      "categoryId": "praias",
-      "title": "Praia de Bainema",
-      "distance": "25 min de quadriciclo",
-      "description": "Extensa praia deserta cercada por coqueiros inclinados. Tranquilidade absoluta e mar transparente.",
-      "image": "/images/drink_tropical.jpg",
-      "badge": "Deserta"
+      "categoryId": "gastronomia",
+      "title": "Lagosta no Guido (Praia da Cueira)",
+      "distance": "20 min a pé via trilha de coqueiros",
+      "description": "Famoso restaurante à beira-mar onde a lagosta na lenha é preparada na hora.",
+      "image": "/images/lagosta_manteiga.jpg",
+      "badge": "Tradição Baiana"
     },
     {
       "id": "g4",
-      "categoryId": "gastronomia",
-      "title": "Restaurante Moqueca do Guido",
-      "distance": "Praia da Cueira (15 min a pé)",
-      "description": "Famoso pela moqueca de lagosta na lenha preparada à beira da praia.",
+      "categoryId": "utilidade",
+      "title": "Ponto de Quadriciclos & Jardineiras",
+      "distance": "Centro da Vila de Moreré (3 min a pé)",
+      "description": "Transporte fácil para Velha Boipeba e Boca da Barra. Aceita PIX e dinheiro.",
       "image": "/images/cafe_da_manha.jpg",
-      "badge": "Culinária Baiana"
+      "badge": "Transporte Local"
     },
     {
       "id": "g5",
-      "categoryId": "passeios",
-      "title": "Volta à Ilha de Lancha",
-      "distance": "Saída do Cais (8 min a pé)",
-      "description": "Passeio completo parando nas Piscinas Naturais de Moreré, Ponta dos Castelhanos e degustação de ostras em Cova da Onça.",
-      "image": "/images/pousada_header.jpg",
-      "badge": "Passeio Principal"
-    },
-    {
-      "id": "g6",
       "categoryId": "utilidade",
-      "title": "Farmácia Boipeba & Posto de Saúde",
-      "distance": "Vila de Velha Boipeba (3 min a pé)",
-      "description": "Atendimento médico de emergência e farmácia com medicamentos básicos e protetor solar.",
+      "title": "Mercearia & Posto de Saúde de Moreré",
+      "distance": "Vila de Moreré (4 min a pé)",
+      "description": "Itens essenciais, protetor solar, repelente e primeiro atendimento de saúde.",
       "image": "/images/cafe_da_manha.jpg",
-      "badge": "Emergência / 24h"
+      "badge": "Utilidade Pública"
     }
   ]
 }

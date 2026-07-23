@@ -1,20 +1,21 @@
 {
-  "pousadaName": "Pousada Mar & Sol",
-  "tagline": "Seu refúgio paradisíaco em Ilha de Boipeba",
+  "pousadaName": "Pousada Mar de Moreré",
+  "tagline": "Pé na areia na Praia de Moreré • Simplicidade, Conforto e Hospitalidade Autêntica",
   "whatsappNumber": "5573999887766",
   "receptionPhone": "(73) 99988-7766",
   "wifi": {
-    "network": "Pousada_MarESol_Hospedes",
-    "password": "boipeba_paradise_2026",
-    "speed": "300 Mbps (Fibra Óptica)"
+    "network": "MarDeMorere_Hospedes",
+    "password": "morere_paradise_2026",
+    "speed": "Fibra Óptica de Alta Velocidade"
   },
   "schedules": {
-    "breakfast": { "start": "07:30", "end": "10:30", "title": "Café da Manhã Buffet" },
-    "pool": { "start": "08:00", "end": "22:00", "title": "Piscina com Hidro" },
-    "kitchen": { "start": "11:30", "end": "21:30", "title": "Cozinha & Room Service" },
+    "breakfast": { "start": "08:00", "end": "10:30", "title": "Café da Manhã Tropical" },
+    "pool": { "start": "08:00", "end": "22:00", "title": "Área de Lazer & Varandas" },
+    "kitchen": { "start": "11:30", "end": "21:00", "title": "Cozinha & Room Service" },
     "silence": { "start": "22:00", "end": "08:00", "title": "Horário de Silêncio" },
-    "reception": { "start": "07:00", "end": "23:00", "title": "Recepção Presencial" }
+    "reception": { "start": "07:00", "end": "22:00", "title": "Atendimento Recepção" }
   },
-  "checkoutTime": "12:00",
-  "checkinTime": "14:00"
+  "checkoutTime": "11:00",
+  "checkinTime": "14:00",
+  "directBookingDiscount": "10% de desconto para reservas diretas via PIX (50% de sinal)"
 }
