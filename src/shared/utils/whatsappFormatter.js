@@ -46,3 +46,55 @@ export function buildWhatsAppLink(phoneNumber, message) {
   const encodedText = encodeURIComponent(message);
   return `https://wa.me/${cleanPhone}?text=${encodedText}`;
 }
+
+/**
+ * Formata pedidos itemizados (entrega no quarto, aluguel de praia, etc.)
+ */
+export function formatItemizedOrderMessage({ title, emoji = '📦', roomNumber, items, generalNotes = '' }) {
+  const room = roomNumber || 'Não Informado';
+  let msg = `*--- ${emoji} ${title.toUpperCase()} ---*\n`;
+  msg += `*Quarto:* ${room}\n\n`;
+
+  msg += `*ITENS:*\n`;
+  items.forEach((item, index) => {
+    const priceLine = typeof item.price === 'number'
+      ? ` - R$ ${(item.price * item.quantity).toFixed(2)}`
+      : '';
+    msg += `${index + 1}. *${item.quantity}x ${item.title}*${priceLine}\n`;
+  });
+
+  if (generalNotes && generalNotes.trim()) {
+    msg += `\n*Observação:* ${generalNotes.trim()}\n`;
+  }
+
+  msg += `\n_Enviado através do Portal Digital do Hóspede_`;
+  return msg;
+}
+
+/**
+ * Formata preferências do café da manhã (itens removidos e substituições)
+ */
+export function formatBreakfastPreferenceMessage({ roomNumber, removedItems, substitutions }) {
+  const room = roomNumber || 'Não Informado';
+  let msg = `*--- 🍳 PREFERÊNCIAS DO CAFÉ DA MANHÃ ---*\n`;
+  msg += `*Quarto:* ${room}\n\n`;
+
+  if (removedItems.length > 0) {
+    msg += `*Não desejo:*\n`;
+    removedItems.forEach(name => { msg += `• ${name}\n`; });
+    msg += `\n`;
+  }
+
+  if (substitutions.length > 0) {
+    msg += `*Substituições:*\n`;
+    substitutions.forEach(({ from, to }) => { msg += `• ${from} → *${to}*\n`; });
+    msg += `\n`;
+  }
+
+  if (removedItems.length === 0 && substitutions.length === 0) {
+    msg += `Cardápio padrão, sem alterações.\n\n`;
+  }
+
+  msg += `_Enviado através do Portal Digital do Hóspede_`;
+  return msg;
+}

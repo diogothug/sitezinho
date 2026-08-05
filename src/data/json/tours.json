@@ -1,0 +1,57 @@
+{
+  "tours": [
+    {
+      "id": "t1",
+      "title": "Piscinas Naturais de Moreré",
+      "description": "Aquário natural com águas mornas e cristalinas na maré baixa, em frente à pousada.",
+      "duration": "2h",
+      "paid": false
+    },
+    {
+      "id": "t2",
+      "title": "Trilha para a Praia de Bainema",
+      "description": "Caminhada tranquila cercada por um túnel de coqueiros até uma praia deserta.",
+      "duration": "40 min",
+      "paid": false
+    },
+    {
+      "id": "t3",
+      "title": "Pôr do Sol na Vila",
+      "description": "Caminhada até o ponto mais alto da vila de Moreré para ver o pôr do sol.",
+      "duration": "1h",
+      "paid": false
+    },
+    {
+      "id": "t4",
+      "title": "Volta à Ilha de Boipeba",
+      "description": "Passeio de barco pelas praias de Boipeba com paradas para banho e almoço.",
+      "duration": "Dia inteiro",
+      "paid": true,
+      "price": 150.0
+    },
+    {
+      "id": "t5",
+      "title": "Mergulho com Snorkel",
+      "description": "Saída guiada até os recifes de coral com equipamento incluso.",
+      "duration": "1h30",
+      "paid": true,
+      "price": 90.0
+    },
+    {
+      "id": "t6",
+      "title": "Passeio a Cavalo na Praia",
+      "description": "Cavalgada pela orla ao entardecer, acompanhado por guia local.",
+      "duration": "1h",
+      "paid": true,
+      "price": 80.0
+    },
+    {
+      "id": "t7",
+      "title": "Castelhanos & Cova da Onça",
+      "description": "Passeio de quadriciclo pelas trilhas até as praias de Castelhanos e Cova da Onça.",
+      "duration": "3h",
+      "paid": true,
+      "price": 120.0
+    }
+  ]
+}

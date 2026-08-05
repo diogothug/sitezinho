@@ -1137,3 +1137,300 @@ body {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ===================== Novas Seções — Guia da Casa ===================== */
+
+.inline-icon {
+  vertical-align: -3px;
+  margin-right: 4px;
+  color: var(--accent-gold);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Música do Café — Votação */
+.vote-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.vote-row {
+  padding: 14px 16px;
+}
+
+.vote-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.vote-song-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.vote-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.vote-bar {
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.vote-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-emerald));
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.btn-vote {
+  background: var(--accent-gold);
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-vote.voted {
+  background: rgba(16, 185, 129, 0.18);
+  color: var(--accent-emerald);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  cursor: default;
+}
+
+.vote-suggest-row {
+  display: flex;
+  gap: 8px;
+}
+
+.vote-suggest-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.btn-suggest {
+  padding: 10px 14px;
+}
+
+/* Cardápio do Café — Personalização */
+.menu-custom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.menu-custom-item {
+  padding: 14px 16px;
+  transition: opacity 0.2s ease;
+}
+
+.menu-custom-item.excluded {
+  opacity: 0.45;
+}
+
+.menu-custom-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.check-box {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 2px solid var(--accent-emerald);
+  background: transparent;
+  color: var(--accent-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.check-box.checked {
+  background: var(--accent-emerald);
+  color: #fff;
+}
+
+.menu-custom-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.menu-custom-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.menu-custom-select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.82rem;
+}
+
+/* Entrega no Quarto */
+.delivery-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.delivery-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.delivery-item-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.delivery-item-price {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.btn-pedir {
+  padding: 7px 14px;
+  font-size: 0.8rem;
+}
+
+.delivery-cart-bar {
+  position: sticky;
+  bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-gold);
+  color: #000;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.delivery-cart-bar .btn-primary {
+  background: #000;
+  color: var(--accent-gold);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+/* Passeios */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.tour-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tour-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.tour-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.tour-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.tour-duration {
+  color: var(--text-muted);
+}
+
+.tour-price {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+/* Steppers — Lavanderia & Praia */
+.stepper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stepper-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.stepper-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.confirm-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent-emerald);
+  margin-top: 12px;
+  font-weight: 600;
+}

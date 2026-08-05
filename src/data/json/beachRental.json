@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": "b1", "title": "Barraca de Praia", "icon": "Umbrella", "priceLabel": "R$ 20 / dia" },
+    { "id": "b2", "title": "Cooler com Gelo", "icon": "Snowflake", "priceLabel": "R$ 15 / dia" },
+    { "id": "b3", "title": "Cadeira de Praia", "icon": "Armchair", "priceLabel": "R$ 10 / dia" }
+  ]
+}
