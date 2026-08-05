@@ -1,11 +1,14 @@
-const CACHE_NAME = 'pousada-portal-v1';
+const CACHE_NAME = 'pousada-portal-v2';
+// Usa o escopo real do Service Worker (ex: https://host/sitezinho/) em vez de
+// assumir que o site está hospedado na raiz do domínio.
+const BASE_PATH = self.registration.scope;
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/images/pousada_header.jpg',
-  '/images/cafe_da_manha.jpg',
-  '/images/drink_tropical.jpg'
+  BASE_PATH,
+  `${BASE_PATH}index.html`,
+  `${BASE_PATH}manifest.json`,
+  `${BASE_PATH}images/pousada_header.jpg`,
+  `${BASE_PATH}images/cafe_da_manha.jpg`,
+  `${BASE_PATH}images/drink_tropical.jpg`
 ];
 
 self.addEventListener('install', (event) => {
@@ -50,7 +53,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       }).catch(() => {
         // Offline fallback
-        return caches.match('/');
+        return caches.match(BASE_PATH);
       });
     })
   );
