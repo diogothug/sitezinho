@@ -13,6 +13,7 @@ import Toast from './shared/components/Toast';
 
 import { resolveCurrentRoom, saveStoredRoomNumber } from './shared/utils/roomDetector';
 import { addToCart, removeFromCart, updateCartItemQuantity } from './shared/utils/cartService';
+import { assetUrl } from './shared/utils/assetPath';
 import i18nData from './data/json/i18n.json';
 import settings from './data/json/settings.json';
 
@@ -32,7 +33,7 @@ export default function App() {
 
     // Registra Service Worker para PWA
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+      navigator.serviceWorker.register(assetUrl('/sw.js')).catch(err => console.log('SW registration failed:', err));
     }
   }, []);
 
@@ -83,7 +84,7 @@ export default function App() {
 
       {/* App Top Header */}
       <header className="app-header glass-panel">
-        <img src="/images/pousada_header.jpg" alt="Pousada Mar & Sol" className="hero-banner-img" />
+        <img src={assetUrl('/images/pousada_header.jpg')} alt="Pousada Mar & Sol" className="hero-banner-img" />
         <div className="hero-overlay">
           <div>
             <h1 className="hero-brand-title">{settings.pousadaName}</h1>

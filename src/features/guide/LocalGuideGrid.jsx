@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Compass, MapPin } from 'lucide-react';
 import guideData from '../../data/json/guide.json';
+import { assetUrl } from '../../shared/utils/assetPath';
 
 export default function LocalGuideGrid({ t }) {
   const [activeFilter, setActiveFilter] = useState('todos');
@@ -40,7 +41,7 @@ export default function LocalGuideGrid({ t }) {
         {filteredAttractions.map(item => (
           <div key={item.id} className="guide-card glass-panel">
             <div className="guide-card-img-wrapper">
-              <img src={item.image} alt={item.title} className="guide-card-img" />
+              <img src={assetUrl(item.image)} alt={item.title} className="guide-card-img" />
               <span className="guide-badge">{item.badge}</span>
             </div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Check, Info, ShoppingBag } from 'lucide-react';
 import menuData from '../../data/json/menu.json';
+import { assetUrl } from '../../shared/utils/assetPath';
 
 export default function MenuCatalog({ onAddToCart, onShowToast, cartCount, onOpenCart }) {
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -73,7 +74,7 @@ export default function MenuCatalog({ onAddToCart, onShowToast, cartCount, onOpe
         {filteredItems.map(item => (
           <div key={item.id} className="menu-card glass-panel">
             <div className="menu-card-img-wrapper" onClick={() => handleOpenDetailModal(item)}>
-              <img src={item.image} alt={item.title} className="menu-card-img" />
+              <img src={assetUrl(item.image)} alt={item.title} className="menu-card-img" />
               {item.tags && item.tags.length > 0 && (
                 <span className="menu-tag-badge">{item.tags[0]}</span>
               )}
@@ -118,7 +119,7 @@ export default function MenuCatalog({ onAddToCart, onShowToast, cartCount, onOpe
             </div>
 
             <div className="modal-body">
-              <img src={selectedItemModal.image} alt={selectedItemModal.title} className="modal-img" />
+              <img src={assetUrl(selectedItemModal.image)} alt={selectedItemModal.title} className="modal-img" />
               <p className="modal-desc">{selectedItemModal.description}</p>
               <div className="modal-price">Preço unitário: <strong>R$ {selectedItemModal.price.toFixed(2)}</strong></div>
 
