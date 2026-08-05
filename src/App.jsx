@@ -9,6 +9,12 @@ import QuickActionButtons from './features/requests/QuickActionButtons';
 import LocalGuideGrid from './features/guide/LocalGuideGrid';
 import RulesAccordion from './features/rules/RulesAccordion';
 import GlobalSearchBar from './features/search/GlobalSearchBar';
+import BreakfastMusicVote from './features/breakfast-music/BreakfastMusicVote';
+import BreakfastMenuCustomizer from './features/breakfast-menu/BreakfastMenuCustomizer';
+import RoomDeliveryCatalog from './features/delivery/RoomDeliveryCatalog';
+import ToursSection from './features/tours/ToursSection';
+import LaundryRequest from './features/laundry/LaundryRequest';
+import BeachRentalRequest from './features/beach-rental/BeachRentalRequest';
 import Toast from './shared/components/Toast';
 
 import { resolveCurrentRoom, saveStoredRoomNumber } from './shared/utils/roomDetector';
@@ -135,6 +141,18 @@ export default function App() {
             cartCount={totalCartCount}
             onOpenCart={() => setIsCartOpen(true)}
           />
+
+          <BreakfastMusicVote onShowToast={showToast} />
+
+          <BreakfastMenuCustomizer currentRoom={currentRoom} onShowToast={showToast} />
+
+          <RoomDeliveryCatalog currentRoom={currentRoom} onShowToast={showToast} />
+
+          <ToursSection currentRoom={currentRoom} onShowToast={showToast} />
+
+          <LaundryRequest currentRoom={currentRoom} onShowToast={showToast} />
+
+          <BeachRentalRequest currentRoom={currentRoom} onShowToast={showToast} />
 
           <LocalGuideGrid t={t} />
 

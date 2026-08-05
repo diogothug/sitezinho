@@ -1,0 +1,9 @@
+{
+  "songs": [
+    { "id": "s1", "title": "Bossa Nova ao Vivo", "votes": 7 },
+    { "id": "s2", "title": "MPB Clássica", "votes": 5 },
+    { "id": "s3", "title": "Forró Pé de Serra", "votes": 4 },
+    { "id": "s4", "title": "Reggae na Praia", "votes": 2 },
+    { "id": "s5", "title": "Samba de Roda Baiano", "votes": 3 }
+  ]
+}

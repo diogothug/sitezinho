@@ -1,0 +1,23 @@
+{
+  "categories": [
+    { "id": "tabacaria", "label": "Tabacaria", "icon": "Cigarette" },
+    { "id": "doces", "label": "Doces", "icon": "Candy" },
+    { "id": "higiene", "label": "Higiene Pessoal", "icon": "ShowerHead" }
+  ],
+  "items": [
+    { "id": "d1", "categoryId": "tabacaria", "title": "Cigarro (maço)", "price": 12.0 },
+    { "id": "d2", "categoryId": "tabacaria", "title": "Isqueiro", "price": 6.0 },
+    { "id": "d3", "categoryId": "tabacaria", "title": "Charuto Avulso", "price": 18.0 },
+
+    { "id": "d4", "categoryId": "doces", "title": "Barra de Chocolate", "price": 9.0 },
+    { "id": "d5", "categoryId": "doces", "title": "Cocada Artesanal", "price": 7.0 },
+    { "id": "d6", "categoryId": "doces", "title": "Brigadeiro (unidade)", "price": 4.0 },
+    { "id": "d7", "categoryId": "doces", "title": "Bala de Coco", "price": 3.0 },
+
+    { "id": "d8", "categoryId": "higiene", "title": "Protetor Solar", "price": 25.0 },
+    { "id": "d9", "categoryId": "higiene", "title": "Repelente", "price": 15.0 },
+    { "id": "d10", "categoryId": "higiene", "title": "Escova + Pasta de Dente", "price": 10.0 },
+    { "id": "d11", "categoryId": "higiene", "title": "Absorvente", "price": 8.0 },
+    { "id": "d12", "categoryId": "higiene", "title": "Preservativo", "price": 6.0 }
+  ]
+}
