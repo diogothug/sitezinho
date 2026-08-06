@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "id": "cb1", "title": "Café Coado" },
+    { "id": "cb2", "title": "Iogurte Natural Feito Aqui" },
+    { "id": "cb3", "title": "Granola" },
+    { "id": "cb4", "title": "Frutas" },
+    { "id": "cb5", "title": "Ovos Caipiras Mexidos" },
+    { "id": "cb6", "title": "Suco Natural" },
+    { "id": "cb7", "title": "Pão" },
+    { "id": "cb8", "title": "Banana da Terra Cozida" },
+    { "id": "cb9", "title": "Uma Sobremesa" }
+  ]
+}
