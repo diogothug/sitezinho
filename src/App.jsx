@@ -91,7 +91,7 @@ export default function App() {
 
       {/* App Top Header */}
       <header className="app-header glass-panel">
-        <img src={assetUrl('/images/pousada_header.jpg')} alt="Pousada Mar & Sol" className="hero-banner-img" />
+        <img src={assetUrl('/images/pousada_header.jpg')} alt="Pousada Mar de Moreré" className="hero-banner-img" />
         <div className="hero-overlay">
           <div>
             <h1 className="hero-brand-title">{settings.pousadaName}</h1>

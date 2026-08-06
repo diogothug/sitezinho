@@ -1,6 +1,6 @@
 {
   "pt": {
-    "welcome": "Bem-vindo(a) à Pousada Mar & Sol",
+    "welcome": "Bem-vindo(a) à Pousada Mar de Moreré",
     "room": "Quarto",
     "wifiTitle": "Conexão Wi-Fi do Hóspede",
     "wifiCopy": "Copiar Senha",
@@ -20,7 +20,7 @@
     "closed": "Fechado"
   },
   "en": {
-    "welcome": "Welcome to Pousada Mar & Sol",
+    "welcome": "Welcome to Pousada Mar de Moreré",
     "room": "Room",
     "wifiTitle": "Guest Wi-Fi Connection",
     "wifiCopy": "Copy Password",
@@ -40,7 +40,7 @@
     "closed": "Closed"
   },
   "es": {
-    "welcome": "Bienvenido(a) a Pousada Mar & Sol",
+    "welcome": "Bienvenido(a) a Pousada Mar de Moreré",
     "room": "Habitación",
     "wifiTitle": "Conexión Wi-Fi para Huéspedes",
     "wifiCopy": "Copiar Contraseña",
