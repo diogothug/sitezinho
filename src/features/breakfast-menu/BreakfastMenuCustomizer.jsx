@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Coffee, Send } from 'lucide-react';
-import menuData from '../../data/json/menu.json';
+import breakfastMenuData from '../../data/json/breakfastMenu.json';
 import settings from '../../data/json/settings.json';
 import { formatBreakfastPreferenceMessage, buildWhatsAppLink } from '../../shared/utils/whatsappFormatter';
 
@@ -14,10 +14,7 @@ const SUBSTITUTION_OPTIONS = [
 ];
 
 export default function BreakfastMenuCustomizer({ currentRoom, onShowToast }) {
-  const breakfastItems = useMemo(
-    () => menuData.items.filter(item => item.categoryId === 'cafe'),
-    []
-  );
+  const breakfastItems = useMemo(() => breakfastMenuData.items, []);
 
   const [preferences, setPreferences] = useState(() => {
     const initial = {};
@@ -83,7 +80,6 @@ export default function BreakfastMenuCustomizer({ currentRoom, onShowToast }) {
                 </button>
                 <div>
                   <div className="menu-custom-name">{item.title}</div>
-                  <div className="menu-custom-desc">{item.description}</div>
                 </div>
               </div>
 
