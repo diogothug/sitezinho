@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pousada-portal-v2';
+const CACHE_NAME = 'pousada-portal-v3';
 // Usa o escopo real do Service Worker (ex: https://host/sitezinho/) em vez de
 // assumir que o site está hospedado na raiz do domínio.
 const BASE_PATH = self.registration.scope;
@@ -38,23 +38,21 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-          return networkResponse;
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
         return networkResponse;
-      }).catch(() => {
-        // Offline fallback
-        return caches.match(BASE_PATH);
-      });
-    })
+      })
+      .catch(() => {
+        // Sem internet: usa a última versão salva, se existir
+        return caches.match(event.request).then((cachedResponse) => {
+          return cachedResponse || caches.match(BASE_PATH);
+        });
+      })
   );
 });
