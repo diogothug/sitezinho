@@ -16,6 +16,12 @@ const YT_OAUTH_CLIENT_SECRET = defineSecret('YT_OAUTH_CLIENT_SECRET');
 const YT_OAUTH_REFRESH_TOKEN = defineSecret('YT_OAUTH_REFRESH_TOKEN');
 const YT_PLAYLIST_ID = defineSecret('YT_PLAYLIST_ID');
 
+// Guarda simples contra spam de busca: 1 busca por hóspede a cada 3s.
+// Memória da instância — suficiente na escala de uma pousada (e protege
+// a quota diária da YouTube Data API: busca custa 100 units, limite ~10k/dia).
+const lastSearchByUid = new Map();
+const SEARCH_MIN_INTERVAL_MS = 3000;
+
 /**
  * Monta um client OAuth2 autenticado como o dono da playlist (a pousada),
  * usando o refresh token obtido uma única vez no setup (veja SETUP_YOUTUBE.md).
@@ -30,6 +36,45 @@ function getAuthenticatedYoutubeClient() {
 }
 
 /**
+ * Tenta inserir a música na playlist. Em caso de falha, marca o doc com
+ * playlistError pra nunca falhar em silêncio — o próximo voto tenta de novo.
+ * Retorna { ok, playlistItemId }.
+ */
+async function addToPlaylist(videoId, songRef) {
+  try {
+    const youtube = getAuthenticatedYoutubeClient();
+    const { data: playlistItem } = await youtube.playlistItems.insert({
+      part: ['snippet'],
+      requestBody: {
+        snippet: {
+          playlistId: YT_PLAYLIST_ID.value(),
+          resourceId: { kind: 'youtube#video', videoId }
+        }
+      }
+    });
+
+    await songRef.update({
+      addedToPlaylist: true,
+      playlistItemId: playlistItem.id,
+      playlistError: false,
+      playlistErrorAt: admin.firestore.FieldValue.delete()
+    });
+    return { ok: true, playlistItemId: playlistItem.id };
+  } catch (err) {
+    // A música continua valendo o voto no app mesmo se a chamada à playlist
+    // falhar (ex: refresh token expirado) — mas agora fica MARCADA no
+    // Firestore e logada com marcador, pra dar pra detectar e retentar.
+    await songRef.update({
+      playlistError: true,
+      playlistErrorAt: admin.firestore.FieldValue.serverTimestamp(),
+      lastPlaylistError: String(err.message || err).slice(0, 300)
+    }).catch(() => {});
+    console.error(`[PLAYLIST-FALHA] videoId=${videoId} erro=${err.message}`);
+    return { ok: false };
+  }
+}
+
+/**
  * searchYoutubeSongs — busca músicas no YouTube (usada pelo campo de busca
  * da seção "Música do Café da Manhã"). Usa só uma API key simples, sem OAuth,
  * porque busca é dado público.
@@ -37,7 +82,19 @@ function getAuthenticatedYoutubeClient() {
 exports.searchYoutubeSongs = onCall(
   { secrets: [YOUTUBE_API_KEY] },
   async (request) => {
-    const query = (request.data?.query || '').trim();
+    if (!request.auth) {
+      throw new HttpsError('unauthenticated', 'É preciso estar autenticado para buscar.');
+    }
+    const uid = request.auth.uid;
+
+    const now = Date.now();
+    const last = lastSearchByUid.get(uid) || 0;
+    if (now - last < SEARCH_MIN_INTERVAL_MS) {
+      throw new HttpsError('resource-exhausted', 'Calma aí, uma busca por vez.');
+    }
+    lastSearchByUid.set(uid, now);
+
+    const query = (request.data?.query || '').trim().slice(0, 80);
     if (!query) {
       throw new HttpsError('invalid-argument', 'Informe um termo de busca.');
     }
@@ -50,7 +107,7 @@ exports.searchYoutubeSongs = onCall(
       type: ['video'],
       videoCategoryId: '10', // Música
       maxResults: 8,
-      safeSearch: 'none'
+      safeSearch: 'moderate'
     });
 
     return {
@@ -85,7 +142,7 @@ exports.voteSong = onCall(
     const uid = request.auth.uid;
     const songRef = db.collection('songVotes').doc(videoId);
 
-    const { isFirstVoteEver, newVoteCount, alreadyVoted } = await db.runTransaction(async (tx) => {
+    const { needsPlaylistAdd, newVoteCount, alreadyVoted } = await db.runTransaction(async (tx) => {
       const doc = await tx.get(songRef);
 
       if (!doc.exists) {
@@ -97,14 +154,15 @@ exports.voteSong = onCall(
           votes: 1,
           voterIds: [uid],
           addedToPlaylist: false,
+          playlistError: false,
           createdAt: admin.firestore.FieldValue.serverTimestamp()
         });
-        return { isFirstVoteEver: true, newVoteCount: 1, alreadyVoted: false };
+        return { needsPlaylistAdd: true, newVoteCount: 1, alreadyVoted: false };
       }
 
       const current = doc.data();
       if ((current.voterIds || []).includes(uid)) {
-        return { isFirstVoteEver: false, newVoteCount: current.votes, alreadyVoted: true };
+        return { needsPlaylistAdd: false, newVoteCount: current.votes, alreadyVoted: true };
       }
 
       const updatedVotes = (current.votes || 0) + 1;
@@ -112,39 +170,24 @@ exports.voteSong = onCall(
         votes: updatedVotes,
         voterIds: admin.firestore.FieldValue.arrayUnion(uid)
       });
-      return { isFirstVoteEver: false, newVoteCount: updatedVotes, alreadyVoted: false };
+
+      // Primeiro voto SEMPRE adiciona. Se a música já tinha falhado ao entrar
+      // na playlist, o próximo voto tenta de novo (auto-cura depois do fix).
+      const needsAdd = current.addedToPlaylist ? false : true;
+      return { needsPlaylistAdd: needsAdd, newVoteCount: updatedVotes, alreadyVoted: false };
     });
 
     if (alreadyVoted) {
       throw new HttpsError('already-exists', 'Você já votou nessa música.');
     }
 
-    // Só na primeira vez que a música é sugerida, ela entra na playlist real.
-    if (isFirstVoteEver) {
-      try {
-        const youtube = getAuthenticatedYoutubeClient();
-        const { data: playlistItem } = await youtube.playlistItems.insert({
-          part: ['snippet'],
-          requestBody: {
-            snippet: {
-              playlistId: YT_PLAYLIST_ID.value(),
-              resourceId: { kind: 'youtube#video', videoId }
-            }
-          }
-        });
-
-        await songRef.update({
-          addedToPlaylist: true,
-          playlistItemId: playlistItem.id
-        });
-      } catch (err) {
-        // A música continua valendo o voto no app mesmo se a chamada à
-        // playlist falhar (ex: token expirado) — não derruba a votação do
-        // hóspede. O erro fica registrado nos logs pra investigação.
-        console.error('Falha ao adicionar música à playlist do YouTube:', err.message);
-      }
+    // Só adiciona na playlist quando necessário (1º voto ou retry de falha).
+    let addedToPlaylist = false;
+    if (needsPlaylistAdd) {
+      const res = await addToPlaylist(videoId, songRef);
+      addedToPlaylist = res.ok;
     }
 
-    return { votes: newVoteCount, addedToPlaylist: isFirstVoteEver };
+    return { votes: newVoteCount, addedToPlaylist };
   }
 );
