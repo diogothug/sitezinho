@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "id": "m1", "title": "Máscara de Mergulho", "priceLabel": "R$ 15 / dia" },
+    { "id": "m2", "title": "Snorkel (Respirador)", "priceLabel": "R$ 10 / dia" },
+    { "id": "m3", "title": "Nadadeiras (Pé de Pato)", "priceLabel": "R$ 20 / dia" },
+    { "id": "m4", "title": "Roupa de Neoprene", "priceLabel": "R$ 30 / dia" },
+    { "id": "m5", "title": "Cinto de Chumbo", "priceLabel": "R$ 15 / dia" },
+    { "id": "m6", "title": "Arbalete (Pesca Sub)", "priceLabel": "R$ 40 / dia" },
+    { "id": "m7", "title": "Bóia de Sinalização", "priceLabel": "R$ 10 / dia" },
+    { "id": "m8", "title": "Luva e Bota de Neoprene", "priceLabel": "R$ 15 / dia" }
+  ]
+}

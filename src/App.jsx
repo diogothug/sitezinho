@@ -15,6 +15,7 @@ import RoomDeliveryCatalog from './features/delivery/RoomDeliveryCatalog';
 import ToursSection from './features/tours/ToursSection';
 import LaundryRequest from './features/laundry/LaundryRequest';
 import BeachRentalRequest from './features/beach-rental/BeachRentalRequest';
+import DivingRentalRequest from './features/diving-rental/DivingRentalRequest';
 import Toast from './shared/components/Toast';
 
 import { resolveCurrentRoom, saveStoredRoomNumber } from './shared/utils/roomDetector';
@@ -153,6 +154,8 @@ export default function App() {
           <LaundryRequest currentRoom={currentRoom} onShowToast={showToast} />
 
           <BeachRentalRequest currentRoom={currentRoom} onShowToast={showToast} />
+
+          <DivingRentalRequest currentRoom={currentRoom} onShowToast={showToast} />
 
           <LocalGuideGrid t={t} />
 
