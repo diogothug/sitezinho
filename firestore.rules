@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Votos de música do café da manhã: qualquer hóspede autenticado (mesmo
+    // anonimamente) pode ler o placar em tempo real, mas a escrita só
+    // acontece via Cloud Function (Admin SDK ignora estas regras), pra
+    // garantir "um voto por pessoa por música" e evitar votos falsos.
+    match /songVotes/{videoId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
