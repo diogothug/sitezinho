@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Music, Search, Check, ListMusic } from 'lucide-react';
 import { db, isFirebaseConfigured, ensureAnonymousAuth, callSearchYoutubeSongs, callVoteSong } from '../../shared/lib/firebase';
 import { collection, onSnapshot, orderBy, query as firestoreQuery } from 'firebase/firestore';
@@ -11,6 +11,7 @@ export default function BreakfastMusicVote({ onShowToast }) {
   const [searching, setSearching] = useState(false);
   const [votingId, setVotingId] = useState(null);
   const [myVotes, setMyVotes] = useState([]);
+  const lastSearchAt = useRef(0);
 
   // Autentica o hóspede anonimamente assim que a seção monta
   useEffect(() => {
@@ -33,6 +34,12 @@ export default function BreakfastMusicVote({ onShowToast }) {
   const handleSearch = useCallback(async () => {
     const term = searchTerm.trim();
     if (!term) return;
+    const now = Date.now();
+    if (now - lastSearchAt.current < 1500) {
+      if (onShowToast) onShowToast('Calma aí, uma busca por vez...', 'info');
+      return;
+    }
+    lastSearchAt.current = now;
     setSearching(true);
     try {
       const { data } = await callSearchYoutubeSongs(term);
@@ -98,7 +105,7 @@ export default function BreakfastMusicVote({ onShowToast }) {
           onChange={e => setSearchTerm(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && handleSearch()}
         />
-        <button className="btn-primary btn-suggest" onClick={handleSearch} disabled={searching}>
+        <button className="btn-primary btn-suggest" onClick={handleSearch} disabled={searching || !ready}>
           <Search size={16} />
         </button>
       </div>
@@ -115,7 +122,7 @@ export default function BreakfastMusicVote({ onShowToast }) {
               <button
                 className="btn-vote"
                 onClick={() => handleVote(song)}
-                disabled={votingId === song.videoId || myVotes.includes(song.videoId)}
+                disabled={!ready || votingId === song.videoId || myVotes.includes(song.videoId)}
               >
                 {votingId === song.videoId ? '...' : 'Votar ▲'}
               </button>
@@ -149,7 +156,7 @@ export default function BreakfastMusicVote({ onShowToast }) {
               <button
                 className={`btn-vote ${alreadyVoted ? 'voted' : ''}`}
                 onClick={() => handleVote(song)}
-                disabled={votingId === song.id || alreadyVoted}
+                disabled={!ready || votingId === song.id || alreadyVoted}
               >
                 {alreadyVoted ? <><Check size={14} /> Você votou</> : 'Votar ▲'}
               </button>
