@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Wifi, Copy, Check, Eye, EyeOff } from 'lucide-react';
-import settings from '../../data/json/settings.json';
+import { getGuestWifiCredentials } from '../../shared/utils/wifiService';
 
 export default function WifiQuickConnect({ onShowToast, t }) {
   const [copied, setCopied] = useState(false);
   const [showPass, setShowPass] = useState(false);
+  const wifiConfig = getGuestWifiCredentials();
 
   const handleCopyPassword = () => {
-    navigator.clipboard.writeText(settings.wifi.password);
+    navigator.clipboard.writeText(wifiConfig.password);
     setCopied(true);
     if (onShowToast) onShowToast(t('wifiCopied'), 'success');
     setTimeout(() => setCopied(false), 3000);
@@ -21,7 +22,7 @@ export default function WifiQuickConnect({ onShowToast, t }) {
         </div>
         <div>
           <h3 className="wifi-title">{t('wifiTitle')}</h3>
-          <p className="wifi-network">{settings.wifi.network} • <span className="wifi-speed">{settings.wifi.speed}</span></p>
+          <p className="wifi-network">{wifiConfig.network} • <span className="wifi-speed">{wifiConfig.speed}</span></p>
         </div>
       </div>
 
@@ -29,7 +30,7 @@ export default function WifiQuickConnect({ onShowToast, t }) {
         <div className="wifi-password-display">
           <span className="pass-label">Senha:</span>
           <span className="pass-value">
-            {showPass ? settings.wifi.password : '••••••••••••'}
+            {showPass ? wifiConfig.password : '••••••••••••'}
           </span>
           <button 
             className="btn-toggle-eye" 

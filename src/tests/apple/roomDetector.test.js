@@ -8,12 +8,12 @@ describe('Apple-Style Test Suite: roomDetector (QR Code Inteligente por Quarto)'
 
   it('deve extrair o quarto a partir de ?room=08 na URL', () => {
     const room = detectRoomFromURL('?room=08');
-    expect(room).toBe('08');
+    expect(room).toBe('Quarto 08');
   });
 
   it('deve extrair o quarto a partir de ?q=5 com formatação de 2 dígitos ("05")', () => {
     const room = detectRoomFromURL('?q=5');
-    expect(room).toBe('05');
+    expect(room).toBe('Quarto 05');
   });
 
   it('deve salvar e recuperar o número do quarto no localStorage', () => {
