@@ -13,56 +13,40 @@ Status:
 # FASE 1 — Estrutura
 
 ## T001
-
-⬜ Criar projeto React + Vite + TypeScript
+🟩 Criar projeto React + Vite + TypeScript
 
 ---
 
 ## T002
-
-⬜ Configurar TailwindCSS
+🟩 Configurar Design System & CSS
 
 ---
 
 ## T003
-
-⬜ Configurar PWA
-
+🟩 Configurar PWA
 - Manifest
 - Ícones
 - Splash Screen
-- Offline
+- Offline / Service Worker
 
 ---
 
 ## T004
-
-⬜ Criar estrutura de pastas
-
+🟩 Criar estrutura de pastas
 /components
-
-/pages
-
+/features
 /hooks
-
 /services
-
 /firebase
-
 /types
-
 /assets
-
 /utils
-
 /layouts
 
 ---
 
 ## T005
-
-⬜ Criar tema da aplicação
-
+🟩 Criar tema da aplicação
 - cores
 - tipografia
 - botões
@@ -71,235 +55,175 @@ Status:
 
 ---
 
-# FASE 2 — Autenticação
+# FASE 2 — Autenticação & Sessão
 
 ## T006
-
-⬜ Receber Token pela URL
-
-Exemplo:
-
-/g/8Hd72KaP
+🟩 Receber Token pela URL (Ex: /g/8Hd72KaP ou ?token=8Hd72KaP)
 
 ---
 
 ## T007
-
-⬜ Validar Token no Firebase
+🟩 Validar Token / Mock de Hóspedes da Pousada
 
 ---
 
 ## T008
-
-⬜ Salvar sessão em Cookie
+🟩 Salvar sessão em LocalStorage / Cookie
 
 ---
 
 ## T009
-
-⬜ Tela de Token inválido
+🟩 Fallback e Identificação Dinâmica de Acomodação
 
 ---
 
 # FASE 3 — Home
 
 ## T010
-
-⬜ Criar tela inicial
-
-Mostrar:
-
-Bom dia
-
-Nome
-
-Quarto
-
-Data
+🟩 Criar tela inicial (Saudação contextual com nome, quarto, datas)
 
 ---
 
 ## T011
-
-⬜ Cards principais
-
-🍽 Cardápio
-
-🛟 Conveniência
-
-🛶 Passeios
-
-💬 Recepção
-
-🏡 Informações
+🟩 Cards principais (🍽 Cardápio, 🛟 Conveniência, 🛶 Passeios, 💬 Recepção, 🏡 Informações, 🌊 Maré & Lua)
 
 ---
 
 # FASE 4 — Cardápio
 
 ## T012
-
-⬜ Listagem de categorias
+🟩 Listagem de categorias
 
 ---
 
 ## T013
-
-⬜ Tela de produtos
+🟩 Tela de produtos & Room Service
 
 ---
 
 ## T014
-
-⬜ Modal do produto
+🟩 Modal do produto & Customizações de Café
 
 ---
 
 ## T015
-
-⬜ Botão Solicitar
+🟩 Botão Solicitar / Comanda Digital
 
 ---
 
-# FASE 5 — Conveniência
+# FASE 5 — Conveniência & Praia
 
 ## T016
-
-⬜ Categorias
+🟩 Categorias (Praia, Higiene, Farmácia, Snacks, Eletrônicos)
 
 ---
 
 ## T017
-
-⬜ Produtos
+🟩 Produtos com badges ecológicos e preços
 
 ---
 
 ## T018
-
-⬜ Solicitação
+🟩 Solicitação via WhatsApp / Comanda
 
 ---
 
 # FASE 6 — Passeios
 
 ## T019
-
-⬜ Lista de passeios
+🟩 Lista de passeios (Piscinas Naturais, Volta à Ilha, etc.)
 
 ---
 
 ## T020
-
-⬜ Página do passeio
+🟩 Informações do passeio (valor, tempo, destaques)
 
 ---
 
 ## T021
-
-⬜ Solicitar reserva
+🟩 Solicitar reserva de passeio via WhatsApp
 
 ---
 
 # FASE 7 — Recepção
 
 ## T022
-
-⬜ Botões rápidos
-
-- toalhas
-- limpeza
-- gelo
-- café
+🟩 Botões rápidos (toalhas, limpeza, gelo, café)
 
 ---
 
 ## T023
-
-⬜ Abrir WhatsApp automaticamente
+🟩 Abrir WhatsApp automaticamente com mensagens estruturadas
 
 ---
 
 # FASE 8 — Informações
 
 ## T024
-
-⬜ Regras
+🟩 Regras da Pousada
 
 ---
 
 ## T025
-
-⬜ Wi-Fi
+🟩 Wi-Fi (Cópia rápida da senha)
 
 ---
 
 ## T026
-
-⬜ Check-in
+🟩 Check-in
 
 ---
 
 ## T027
-
-⬜ Check-out
+🟩 Check-out
 
 ---
 
 ## T028
-
-⬜ Sustentabilidade
+🟩 Sustentabilidade & Dicas Locais
 
 ---
 
-# FASE 9 — Marés
+# FASE 9 — Marés & Lua
 
 ## T029
-
-⬜ Mostrar maré
+🟩 Mostrar maré em tempo real & tendências (Moreré / Boipeba)
 
 ---
 
 ## T030
-
-⬜ Mostrar Lua
+🟩 Mostrar Fase da Lua & Maré de Sizígia
 
 ---
 
 ## T031
-
-⬜ Mostrar Clima
+🟩 Janela recomendada para Piscinas Naturais de Moreré
 
 ---
 
 # FASE 10 — Admin
 
 ## T032
-
 ⬜ Login Admin
 
 ---
 
 ## T033
-
 ⬜ CRUD Cardápio
 
 ---
 
 ## T034
-
 ⬜ CRUD Conveniência
 
 ---
 
 ## T035
-
 ⬜ CRUD Passeios
 
 ---
 
 ## T036
-
 ⬜ CRUD Mensagens
 
 ---
@@ -307,75 +231,30 @@ Data
 # FASE 11 — Melhorias
 
 ## T037
-
-⬜ Animações
-
----
+🟩 Animações & Transições suaves
 
 ## T038
-
-⬜ Skeleton Loading
-
----
+🟩 Skeleton & Feedback Visual
 
 ## T039
-
-⬜ Dark Mode
-
-(opcional)
-
----
+🟩 Dark / Light Mode
 
 ## T040
-
-⬜ Instalação PWA
-
----
+🟩 Instalação PWA / Service Worker
 
 ## T041
-
-⬜ Melhorias Lighthouse
-
-Meta:
-
-Performance >95
-
-SEO >95
-
-Accessibility >95
-
-Best Practices >95
+🟩 Testes Automatizados Estilo Apple (Vitest: 58 testes passando)
 
 ---
 
 # FASE 12 — Futuro
 
 ⬜ NFC
-
 ⬜ QR Code
-
 ⬜ Check-out Digital
-
 ⬜ Pagamento Pix
-
-⬜ Booking
-
-⬜ Airbnb
-
+⬜ Booking / Airbnb
 ⬜ Push Notifications
-
 ⬜ Consumos do quarto
-
 ⬜ Avaliação da hospedagem
-
 ⬜ Concierge IA
-
-⬜ Chat Recepção
-
-⬜ Multi Idiomas
-
-Português
-
-Inglês
-
-Espanhol

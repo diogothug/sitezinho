@@ -1,0 +1,128 @@
+{
+  "categories": [
+    { "id": "praia", "label": "🏖️ Praia & Sol" },
+    { "id": "higiene", "label": "🌿 Higiene & Bem-Estar" },
+    { "id": "farmacia", "label": "🩹 Primeiros Socorros" },
+    { "id": "snacks", "label": "🥥 Snacks & Bebidas" },
+    { "id": "vinhos", "label": "🍷 Vinhos" },
+    { "id": "eletronicos", "label": "⚡ Acessórios & Cabos" }
+  ],
+  "items": [
+    {
+      "id": "conv-1",
+      "categoryId": "praia",
+      "title": "Protetor Solar FPS 50 (Biodegradável)",
+      "description": "Fórmula segura para corais e piscinas naturais de Moreré. 120ml.",
+      "price": 45.0,
+      "badge": "Ecológico"
+    },
+    {
+      "id": "conv-2",
+      "categoryId": "praia",
+      "title": "Repelente Natural de Citronela & Neem",
+      "description": "Proteção eficaz contra mosquitos da mata atlântica. 100ml.",
+      "price": 28.0,
+      "badge": "Mais pedido"
+    },
+    {
+      "id": "conv-3",
+      "categoryId": "praia",
+      "title": "Canga Artesanal Estampa Moreré",
+      "description": "Tecido leve de secagem rápida com estampa exclusiva da ilha.",
+      "price": 60.0
+    },
+    {
+      "id": "conv-4",
+      "categoryId": "praia",
+      "title": "Kit Máscara de Snorkel & Tubo",
+      "description": "Ideal para mergulho nas piscinas naturais.",
+      "price": 35.0
+    },
+    {
+      "id": "conv-5",
+      "categoryId": "higiene",
+      "title": "Kit Dental Ecológico de Bambu",
+      "description": "Escova de bambu natural + pasta de dente compacta.",
+      "price": 18.0
+    },
+    {
+      "id": "conv-6",
+      "categoryId": "higiene",
+      "title": "Sabonete Artesanal de Coco e Dendê",
+      "description": "Produção local da ilha com óleo virgem e manteiga de cacau.",
+      "price": 16.0
+    },
+    {
+      "id": "conv-7",
+      "categoryId": "farmacia",
+      "title": "Kit Curativos & Antisséptico",
+      "description": "Bandagens impermeáveis + gaze e spray antisséptico.",
+      "price": 22.0
+    },
+    {
+      "id": "conv-8",
+      "categoryId": "farmacia",
+      "title": "Dipirona / Paracetamol & Antiácido",
+      "description": "Para alívio rápido de dores de cabeça e indisposição.",
+      "price": 15.0
+    },
+    {
+      "id": "conv-9",
+      "categoryId": "snacks",
+      "title": "Castanhas de Caju Tostadas da Bahia",
+      "description": "Pacote 150g crocante e levemente salgada.",
+      "price": 24.0
+    },
+    {
+      "id": "conv-10",
+      "categoryId": "snacks",
+      "title": "Água Mineral com ou sem Gás (500ml)",
+      "description": "Garrafa gelada entregue no quarto.",
+      "price": 7.0
+    },
+    {
+      "id": "conv-13",
+      "categoryId": "snacks",
+      "title": "Bombom Ouro Branco",
+      "description": "Bombom Lacta de chocolate branco com wafer crocante. Unidade.",
+      "price": 5.0
+    },
+    {
+      "id": "conv-14",
+      "categoryId": "snacks",
+      "title": "Palha Italiana",
+      "description": "A mesma palha italiana artesanal servida no café da manhã. Unidade.",
+      "price": 8.0,
+      "badge": "Do Café da Manhã"
+    },
+    {
+      "id": "conv-15",
+      "categoryId": "vinhos",
+      "title": "Vinho Tinto Santa Helena Cabernet Sauvignon",
+      "description": "Tinto chileno encorpado com notas de frutas vermelhas e especiarias. 750ml.",
+      "price": 65.0
+    },
+    {
+      "id": "conv-16",
+      "categoryId": "vinhos",
+      "title": "Vinho Verde Casal Garcia",
+      "description": "Branco português leve e refrescante, ideal para o clima tropical de Boipeba. 750ml.",
+      "price": 55.0,
+      "badge": "Refrescante"
+    },
+    {
+      "id": "conv-11",
+      "categoryId": "eletronicos",
+      "title": "Capa Protetora Impermeável para Celular",
+      "description": "Permite fotos submarinas até 10 metros.",
+      "price": 30.0
+    },
+    {
+      "id": "conv-12",
+      "categoryId": "eletronicos",
+      "title": "Cabo USB-C / Lightning Trançado (1.5m)",
+      "description": "Carregamento rápido de emergência.",
+      "price": 35.0
+    }
+  ]
+}

@@ -1,10 +1,22 @@
 /**
- * Motor de busca indexada ponderada para itens do menu, regras, atrações e solicitações.
+ * Motor de busca indexada ponderada para itens do menu, conveniência, regras, atrações e passeios.
  */
 
-export function searchAll(query, { menuItems = [], rules = [], guideAttractions = [] }) {
+export function searchAll(query, { 
+  menuItems = [], 
+  convenienceItems = [], 
+  rules = [], 
+  guideAttractions = [],
+  tours = []
+} = {}) {
   if (!query || typeof query !== 'string' || !query.trim()) {
-    return { menuMatches: [], ruleMatches: [], guideMatches: [] };
+    return { 
+      menuMatches: [], 
+      convenienceMatches: [], 
+      ruleMatches: [], 
+      guideMatches: [], 
+      tourMatches: [] 
+    };
   }
 
   const normalizedQuery = query
@@ -30,6 +42,12 @@ export function searchAll(query, { menuItems = [], rules = [], guideAttractions 
     (item.tags && item.tags.some(tag => matchText(tag)))
   );
 
+  const convenienceMatches = convenienceItems.filter(item =>
+    matchText(item.title) ||
+    matchText(item.description) ||
+    matchText(item.badge)
+  );
+
   const ruleMatches = rules.filter(rule =>
     matchText(rule.title) ||
     matchText(rule.summary) ||
@@ -42,5 +60,17 @@ export function searchAll(query, { menuItems = [], rules = [], guideAttractions 
     matchText(attraction.badge)
   );
 
-  return { menuMatches, ruleMatches, guideMatches };
+  const tourMatches = tours.filter(tour =>
+    matchText(tour.title) ||
+    matchText(tour.description) ||
+    matchText(tour.highlights)
+  );
+
+  return { 
+    menuMatches, 
+    convenienceMatches, 
+    ruleMatches, 
+    guideMatches, 
+    tourMatches 
+  };
 }
